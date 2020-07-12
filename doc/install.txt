@@ -1,0 +1,57 @@
+########################################################
+#  Direct Friends module for Xoops RC3
+#  by P4
+#  p4@directfriends.com - http://www.directfriends.com
+#  Licence: GPL
+########################################################
+
+Installationsanweisungen
+
+Ordner directfriends in den modules-Ordner kopieren.
+Ueber die Moduladministration installieren.
+Ueber die Blockadministration sichtbar machen
+Ueber die Gruppenadministration Berechtigungen setzen
+
+
+////////////////////////////////////////////////////////
+//Install Direct Friends for Xoops RC3 :
+//
+//&&. create sql table :
+//
+//CREATE TABLE xoops_myfriends (
+//   ref int(11) NOT NULL auto_increment,
+//   uid int(5) NOT NULL default '0',
+//   fuid int(5) NOT NULL default '0',
+//   PRIMARY KEY  (ref),
+//   UNIQUE KEY REF (ref)
+//   ) TYPE=MyISAM;
+//
+//&&. go to modules administration : install and activate Direct Friends
+//
+//&&. go into blocks administration and make Direct Friends block visible
+//
+//&&. go to groups administration and set permissions for registered users to use Direct Friends
+//
+//&&. enjoy !
+////////////////////////////////////////////////////////
+########################################################
+#  Changements du 02/03/03
+#  Par lmaix et sylvain
+#  Testé xoops 2 rc2 par sylvain
+########################################################
+Installation/désinstallation automatique de la base
+lors de l'installation du module.
+Réécriture du code pour les accès à la base quel que soit
+le préfixe de votre base.
+
+CREATE TABLE myfriends (
+   ref int(11) NOT NULL auto_increment,
+   uid int(5) NOT NULL default '0',
+   fuid int(5) NOT NULL default '0',
+   PRIMARY KEY  (ref),
+   UNIQUE KEY REF (ref)
+   ) TYPE=MyISAM;
+   
+Ajout de classe xoops2.
+
+C'est tout, enjoy...lol
